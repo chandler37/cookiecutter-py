@@ -1,8 +1,8 @@
 [tool]
 [tool.poetry]
 name = "{{cookiecutter.project_slug}}"
-version = "0.0.0"
-description = "A repository to help you learn Python"
+version = "0.1.0"
+description = "{{cookiecutter.short_description}}"
 authors = ["{{cookiecutter.author_name_and_email}}"]
 license = "Apache-2.0"
 
