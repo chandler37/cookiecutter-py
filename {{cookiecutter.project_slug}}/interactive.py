@@ -1,6 +1,6 @@
 # This file is meant to be used as in `env PYTHONSTARTUP=interactive.py ipython`
 
-from {{cookiecutter.project_slug}} import cat
+from {{cookiecutter.project_slug}} import cat  # noqa: F401
 
 print("""The PYTHONSTARTUP environment variable caused us to load and execute
 interactive.py. You may now type things like the following:

@@ -13,6 +13,7 @@ the above is a new line character"""
     out, err = capsys.readouterr()
     assert out == contents + '\n'
 
+
 def test_create_empty_string_file(tmpdir, capsys):
     contents = ''
     p = tmpdir.mkdir("sub").join("none.txt")
@@ -21,6 +22,7 @@ def test_create_empty_string_file(tmpdir, capsys):
     out, err = capsys.readouterr()
     assert out == ''
     assert err == ''
+
 
 def test_create_single_line_file(tmpdir, capsys):
     contents = "Not a bad fie am I??!"
@@ -31,6 +33,7 @@ def test_create_single_line_file(tmpdir, capsys):
     assert out == '%s\n' % contents
     assert out == '{}\n'.format(contents)
     assert err == ''
+
 
 def test_nonexistant_file():
     with pytest.raises(IOError) as excinfo:

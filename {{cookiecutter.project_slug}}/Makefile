@@ -53,9 +53,14 @@ shell: | venv/installation.success
 run: | venv/installation.success
 	$(ACTIVATE_VENV) && python3 {{cookiecutter.project_slug}}-runner.py $(ARGS)
 
+PYTHONPATH := {{cookiecutter.project_slug}}
+PYTEST_FLAGS := -s -vv --ff
+PYTEST_FLAKE8 := --flake8
+PYTEST_ARGS := .
+PYTEST_MYPY :=
 .PHONY: test
 test: | venv/installation.success
-	$(ACTIVATE_VENV) && python3 run_tests.py
+	$(ACTIVATE_VENV) && PYTHONPATH=$(PYTHONPATH) py.test $(PYTEST_FLAKE8) $(PYTEST_MYPY) $(PYTEST_FLAGS) $(PYTEST_ARGS)
 
 .PHONY: upgrade
 upgrade: unfreezeplus venv/installation.success test
