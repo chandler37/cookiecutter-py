@@ -3,7 +3,7 @@
 name = "{{cookiecutter.project_slug}}"
 version = "0.0.0"
 description = "A repository to help you learn Python"
-authors = ["David L. Chandler <immaculaterhelp@gmail.com>"]
+authors = ["{{cookiecutter.author_name_and_email}}"]
 license = "Apache-2.0"
 
 [tool.poetry.dependencies]
