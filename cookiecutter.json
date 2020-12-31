@@ -1,0 +1,4 @@
+{
+  "project_name": "Heartbreaking work of staggering Python genius",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}"
+}
