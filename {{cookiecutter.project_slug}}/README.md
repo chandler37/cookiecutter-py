@@ -9,9 +9,9 @@ great way to share your idea, so this template helps you do both.
 
 Essentially you want https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow/
 
-- git checkout master
+- git checkout main
 - git pull --ff-only
-- git checkout origin/master -b featurebranch
+- git checkout origin/main -b featurebranch
 - git add newfile
 - git add modifiedfile
 - git commit
