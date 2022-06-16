@@ -67,7 +67,7 @@ upgrade: unfreezeplus venv/installation.success test
 	@echo "The upgraded third-party dependencies might work... at least tests passed."
 
 .PHONY: unfreezeplus
-unfreezeplus:
+unfreezeplus: | venv/installation.success
 	@git diff-index --quiet HEAD || { echo "not in a clean git workspace; run 'git status'"; exit 1; }
 	rm -f venv/installation.success
 	# If this fails, `deactivate; make clean` and try again:
